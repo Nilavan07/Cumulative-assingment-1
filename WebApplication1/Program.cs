@@ -1,5 +1,4 @@
 using System;
-
 using cumulative_assingment_1.Controllers;
 using cumulative_assingment_1.Models;
 
@@ -15,6 +14,8 @@ builder.Services.AddSwaggerGen();
 // Database
 builder.Services.AddScoped<SchoolDbContext>();
 builder.Services.AddScoped<TeacherAPIController>();
+builder.Services.AddScoped<CoursesAPIController>();
+builder.Services.AddScoped<StudentAPIController>();
 
 var app = builder.Build();
 

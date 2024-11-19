@@ -1,14 +1,15 @@
-@model IEnumerable<cumulative_assingment_1.Models.Teacher>
+@model IEnumerable<cumulative_assingment_1.Models.Course>
 
-<!-- Displaying all the teachers on the web page from where you can select any teacher  -->
+<!-- Displaying all the courses on the web page from where you can select any course  -->
 
-<div class="teacher-list">
-    <h2>Our Teachers</h2>
-    @foreach (cumulative_assingment_1.Models.Teacher Teacher in Model)
-    {        
-        <div class="teacher-card">
-            <a href="/TeacherPage/Show/@Teacher.TeacherId" class="teacher-link">
-                <h3 class="teacher-name">@Teacher.TeacherFName @Teacher.TeacherLName</h3>
+<div class="course-list">
+    <h2>Courses We Offer: </h2>
+    @foreach (cumulative_assingment_1.Models.Course Course in Model)
+    {
+        <div class="course-card">
+            <a href="/CoursesPage/ShowCourses/@Course.CourseId" class="course-link">
+                
+                <h3 class="course-name">@Course.CourseName</h3>
             </a>
         </div>
     }
@@ -16,7 +17,7 @@
 
 
 <style>
-    .teacher-list {
+    .course-list {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -25,7 +26,7 @@
         background-color: #f9f9f9;
     }
 
-    .teacher-card {
+    .course-card {
         background-color: #ffffff;
         border: 1px solid #ddd;
         border-radius: 5px;
@@ -36,21 +37,21 @@
         transition: transform 0.2s ease-in-out;
     }
 
-        .teacher-card:hover {
+        .course-card:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
         }
 
-    .teacher-link {
+    .course-link {
         text-decoration: none;
         color: #333;
     }
 
-        .teacher-link:hover {
+        .course-link:hover {
             color: #007bff;
         }
 
-    .teacher-name {
+    .course-name {
         font-size: 1.2rem;
         font-weight: bold;
         margin: 0;
