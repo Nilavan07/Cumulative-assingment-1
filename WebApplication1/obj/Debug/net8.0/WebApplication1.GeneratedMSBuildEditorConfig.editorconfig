@@ -18,8 +18,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/nilavan/Desktop/Cumulative assingment 1/WebApplication1
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/nilavan/Desktop/Cumulative assingment 1/WebApplication1/Views/CoursesPage/DeleteConfirmCourse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291cnNlc1BhZ2UvRGVsZXRlQ29uZmlybUNvdXJzZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/nilavan/Desktop/Cumulative assingment 1/WebApplication1/Views/CoursesPage/ListCourses.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291cnNlc1BhZ2UvTGlzdENvdXJzZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/nilavan/Desktop/Cumulative assingment 1/WebApplication1/Views/CoursesPage/NewCourse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291cnNlc1BhZ2UvTmV3Q291cnNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/nilavan/Desktop/Cumulative assingment 1/WebApplication1/Views/CoursesPage/ShowCourses.cshtml]
@@ -42,16 +50,32 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/nilavan/Desktop/Cumulative assingment 1/WebApplication1/Views/StudentPage/DeleteConfirmStudent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGVudFBhZ2UvRGVsZXRlQ29uZmlybVN0dWRlbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/nilavan/Desktop/Cumulative assingment 1/WebApplication1/Views/StudentPage/ListStudent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGVudFBhZ2UvTGlzdFN0dWRlbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/nilavan/Desktop/Cumulative assingment 1/WebApplication1/Views/StudentPage/NewStudent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGVudFBhZ2UvTmV3U3R1ZGVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/nilavan/Desktop/Cumulative assingment 1/WebApplication1/Views/StudentPage/ShowStudent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGVudFBhZ2UvU2hvd1N0dWRlbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/nilavan/Desktop/Cumulative assingment 1/WebApplication1/Views/TeacherPage/DeleteConfirm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGVhY2hlclBhZ2UvRGVsZXRlQ29uZmlybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/nilavan/Desktop/Cumulative assingment 1/WebApplication1/Views/TeacherPage/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGVhY2hlclBhZ2UvTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/nilavan/Desktop/Cumulative assingment 1/WebApplication1/Views/TeacherPage/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGVhY2hlclBhZ2UvTmV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/nilavan/Desktop/Cumulative assingment 1/WebApplication1/Views/TeacherPage/Show.cshtml]

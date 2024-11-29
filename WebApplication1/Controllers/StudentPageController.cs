@@ -53,6 +53,48 @@ namespace cumulative_assingment_1.Controllers
             Student SelectedStudent = _api.FindStudent(id);
             return View(SelectedStudent);
         }
+// GET : StudentPage/NewStudent
+        [HttpGet]
+        public IActionResult NewStudent(int id)
+        {
+            return View();
+        }
+
+
+
+        // POST: StudentPage/CreateStudent
+        [HttpPost]
+        public IActionResult CreateStudent(Student NewStudent)
+        {
+            int StudentId = _api.AddStudent(NewStudent);
+
+            // redirects to "Show" action on "Student" cotroller with id parameter supplied
+            return RedirectToAction("ShowStudent", new { id = StudentId });
+        }
+
+
+
+
+        // GET : StudentPage/DeleteConfirmStudent/{id}
+        [HttpGet]
+        public IActionResult DeleteConfirmStudent(int id)
+        {
+            Student SelectedStudent = _api.FindStudent(id);
+            return View(SelectedStudent);
+        }
+
+
+
+
+
+        // POST: StudentPage/DeleteStudent/{id}
+        [HttpPost]
+        public IActionResult DeleteStudent(int id)
+        {
+            int StudentId = _api.DeleteStudent(id);
+            // redirects to list action
+            return RedirectToAction("ListStudent");
+        }
 
 
     }

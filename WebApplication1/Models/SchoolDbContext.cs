@@ -7,11 +7,11 @@ namespace cumulative_assingment_1.Models
         //These are readonly "secret" properties. 
         //Only the BlogDbContext class can use them.
         //Change these to match your own local blog database!
-        private static string User { get { return "root"; } }
-        private static string Password { get { return ""; } }
+        private static string User { get { return "Nilavan"; } }
+        private static string Password { get { return "nilavan1999"; } }
         private static string Database { get { return "school"; } }
         private static string Server { get { return "localhost"; } }
-        private static string Port { get { return "3306"; } }
+        private static string Port { get { return "3308"; } }
 
         //ConnectionString is a series of credentials used to connect to the database.
         protected static string ConnectionString

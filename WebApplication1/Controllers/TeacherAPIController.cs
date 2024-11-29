@@ -139,6 +139,89 @@ namespace cumulative_assingment_1.Controllers
             //Return the final list of author names
             return SelectedTeacher;
         }
+        /// <summary>
+        /// The method adds a new teacher to the database by inserting a record into the teachers table and returns the ID of the inserted teacher
+        /// </summary>
+        /// <param name="TeacherData"> An object containing the details of the teacher to be added, including first name, last name, employee number, salary, and hire date </param>
+        /// <returns>
+        /// The ID of the newly inserted teacher record
+        /// </returns>
+        /// <example> 
+        /// POST: api/TeacherAPI/AddTeacher -> 11
+        /// assuming that 11th record is added
+        /// </example>
+
+
+
+        [HttpPost(template: "AddTeacher")]
+        public int AddTeacher([FromBody] Teacher TeacherData)
+        {
+            // 'using' keyword is used that will close the connection by itself after executing the code given inside
+            using (MySqlConnection Connection = _context.AccessDatabase())
+            {
+                // Opening the Connection
+                Connection.Open();
+
+                // Establishing a new query for our database
+                MySqlCommand Command = Connection.CreateCommand();
+
+                // It contains the SQL query to insert a new teacher into the teachers table            
+                Command.CommandText = "INSERT INTO teachers (teacherfname, teacherlname, employeenumber, salary, hiredate) VALUES (@teacherfname, @teacherlname, @employeenumber, @salary, @hiredate)";
+                
+                Command.Parameters.AddWithValue("@teacherfname", TeacherData.TeacherFName);
+                Command.Parameters.AddWithValue("@teacherlname", TeacherData.TeacherLName);
+                Command.Parameters.AddWithValue("@hiredate", TeacherData.TeacherHireDate);
+                Command.Parameters.AddWithValue("@salary", TeacherData.TeacherSalary);
+                Command.Parameters.AddWithValue("@employeenumber", TeacherData.EmployeeNumber);
+
+                // It runs the query against the database and the new record is inserted
+                Command.ExecuteNonQuery();
+
+                // It fetches the ID of the newly inserted teacher record and converts it to an integer to be returned
+                return Convert.ToInt32(Command.LastInsertedId);
+
+
+            }
+
+        }
+
+
+
+        /// <summary>
+        /// The method deletes a teacher from the database using the teacher's ID provided in the request URL. It returns the number of rows affected.
+        /// </summary>
+        /// <param name="TeacherId"> The unique ID of the teacher to be deleted </param>
+        /// <returns>
+        /// The number of rows affected by the DELETE operation
+        /// </returns>
+        /// <example>
+        /// DELETE: api/TeacherAPI/DeleteTeacher/11 -> 1
+        /// </example>
+
+        [HttpDelete(template: "DeleteTeacher/{TeacherId}")]
+
+        public int DeleteTeacher(int TeacherId)
+        {
+            // 'using' keyword is used that will close the connection by itself after executing the code given inside
+            using (MySqlConnection Connection = _context.AccessDatabase())
+            {
+                // Opening the Connection
+                Connection.Open();
+
+                // Establishing a new query for our database
+                MySqlCommand Command = Connection.CreateCommand();
+
+                // It contains the SQL query to delete a record from the teachers table based on the teacher's ID
+                Command.CommandText = "DELETE FROM teachers WHERE teacherid=@id";
+                Command.Parameters.AddWithValue("@id", TeacherId);
+
+                // It runs the DELETE query and the number of affected rows is returned.
+                return Command.ExecuteNonQuery();
+
+            }
+
+        }
+
     }
 
 
